@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://xwrjoneufl8h"]
+
+[ext_resource type="PackedScene" uid="uid://bl2g5gy3nc1w1" path="res://fpv_drone.tscn" id="1_rw1jr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ln6rh"]
+size = Vector3(5.173584, 0.2109375, 5.2474976)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7pg3a"]
+size = Vector3(5.173584, 0.2109375, 5.2474976)
+
+[node name="EmptyTest" type="Node3D" unique_id=617237452]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1711211645]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=870208655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66833496, -0.39453125, -0.93344116)
+mesh = SubResource("BoxMesh_ln6rh")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1522845312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66833496, -0.39453125, -0.93344116)
+shape = SubResource("BoxShape3D_7pg3a")
+
+[node name="Camera3D" type="Camera3D" parent="StaticBody3D" unique_id=473718868]
+transform = Transform3D(0.807267, -0.25678226, 0.53139704, 0, 0.90038854, 0.43508676, -0.59018636, -0.3512312, 0.72685397, 1.1715484, 1.2775432, 1.7274656)
+visible = false
+current = true
+
+[node name="Node3D" parent="StaticBody3D" unique_id=1183359985 instance=ExtResource("1_rw1jr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)

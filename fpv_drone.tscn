@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bl2g5gy3nc1w1"]
+
+[ext_resource type="Script" uid="uid://cqwgu3mhy0bre" path="res://scripts/drone_controller.gd" id="1_oihk3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xuv5c"]
+size = Vector3(0.3, 0.05, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ln6rh"]
+albedo_color = Color(0.71971315, 0.22360465, 0.30666786, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xuv5c"]
+size = Vector3(0.3, 0.05, 0.3)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ln6rh"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oihk3"]
+albedo_color = Color(1, 1, 0, 1)
+
+[node name="Drone" type="RigidBody3D" unique_id=1012255546]
+mass = 10.11
+script = ExtResource("1_oihk3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1737311387]
+mesh = SubResource("BoxMesh_xuv5c")
+surface_material_override/0 = SubResource("StandardMaterial3D_ln6rh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1756611781]
+shape = SubResource("BoxShape3D_xuv5c")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=739162125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07173106, -0.019568533)
+
+[node name="RR" type="Node3D" parent="." unique_id=692973630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, 0.15)
+
+[node name="RL" type="Node3D" parent="." unique_id=690660747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 0.15)
+
+[node name="FL" type="Node3D" parent="." unique_id=46835875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, -0.15)
+
+[node name="FR" type="Node3D" parent="." unique_id=2069823405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, -0.15)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=383948420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07173106, -0.019568533)
+mesh = SubResource("SphereMesh_ln6rh")
+skeleton = NodePath("../Camera3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_oihk3")

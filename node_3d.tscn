@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cl0hqqv4wgu3d"]
+
+[ext_resource type="Script" uid="uid://bebyrpk6tbv6k" path="res://PlayerController.gd" id="1_a0tk4"]
+[ext_resource type="Script" uid="uid://cxq0bdai1wo18" path="res://ui.gd" id="3_a0tk4"]
+[ext_resource type="Script" uid="uid://y36udrlq7o56" path="res://terrain.gd" id="3_r3fl7"]
+[ext_resource type="PackedScene" path="res://addons/debug_draw/debug_draw_3d.tscn" id="4_r3fl7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_noarx"]
+radius = 0.833264
+height = 3.68247
+
+[sub_resource type="Theme" id="Theme_a0tk4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i5arm"]
+
+[sub_resource type="Sky" id="Sky_jka67"]
+sky_material = SubResource("ProceduralSkyMaterial_i5arm")
+
+[sub_resource type="Environment" id="Environment_r3fl7"]
+background_mode = 2
+sky = SubResource("Sky_jka67")
+ambient_light_source = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rjd17"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jyk8e"]
+size = Vector3(1.9786377, 0.5115967, 1.9848633)
+
+[node name="Node3D" type="Node3D" unique_id=2115077252]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1602027369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.724396, 0)
+script = ExtResource("1_a0tk4")
+passiveBobbingLevel = -0.003
+passiveBobbingSpeed = 0.205
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=781558593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.43659, 0)
+shape = SubResource("CapsuleShape3D_noarx")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1167688157]
+
+[node name="Control" type="Control" parent="CharacterBody3D/Camera3D" unique_id=1712303329]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 581.0
+offset_bottom = 454.0
+script = ExtResource("3_a0tk4")
+
+[node name="Label" type="Label" parent="CharacterBody3D/Camera3D/Control" unique_id=1301332964]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -9.0
+offset_right = 413.0
+offset_bottom = 985.0
+scale = Vector2(0.0158529, 0.0158529)
+theme = SubResource("Theme_a0tk4")
+theme_override_font_sizes/font_size = 681
+text = "o"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D/Camera3D" unique_id=732333082]
+shadow_enabled = true
+spot_range = 17.013802
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Camera3D" unique_id=1095536364]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+target_position = Vector3(0, -2.88, 0)
+debug_shape_custom_color = Color(1, 1, 1, 1)
+
+[node name="Anchor" type="Node3D" parent="CharacterBody3D" unique_id=1871287581]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=407066541]
+environment = SubResource("Environment_r3fl7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=172766324]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=649337451]
+mesh = SubResource("ArrayMesh_rjd17")
+skeleton = NodePath("../..")
+script = ExtResource("3_r3fl7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=363832622]
+shape = SubResource("BoxShape3D_jyk8e")
+
+[node name="DebugDraw3D" parent="." unique_id=746282605 instance=ExtResource("4_r3fl7")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1560989997]
+transform = Transform3D(0.13061188, 0.42202416, 0.89712644, -0.9735672, -0.116416104, 0.19650507, 0.1873699, -0.89907885, 0.39566356, 0, 47.01175, 41.43449)
