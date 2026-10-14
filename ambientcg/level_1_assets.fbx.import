@@ -1,0 +1,78 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bs6i7l5i6wt16"
+path="res://.godot/imported/level_1_assets.fbx-adbf265106d77326c5d50d9fbc6d0e94.scn"
+
+[deps]
+
+source_file="res://ambientcg/level_1_assets.fbx"
+dest_files=["res://.godot/imported/level_1_assets.fbx-adbf265106d77326c5d50d9fbc6d0e94.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=true
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"aCG_Bricks003_1K_JPG": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ambientcg/Extracted/Bricks097_1K-JPG.tres",
+"use_external/path": "res://ambientcg/Extracted/Bricks097_1K-JPG.tres"
+},
+"aCG_Bricks003_1K_JPG.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ambientcg/Extracted/Bricks097_1K-JPG.tres",
+"use_external/path": "res://ambientcg/Extracted/Bricks097_1K-JPG.tres"
+},
+"aCG_DiamondPlate008C_1K_JPG": {
+"use_external/enabled": false,
+"use_external/path": "res://ambientcg/Extracted/DiamondPlate008C_1K-JPG.tres"
+},
+"aCG_Ground108_1K_JPG": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ambientcg/Extracted/Ground108_1K-JPG.tres",
+"use_external/path": "res://ambientcg/Extracted/Ground108_1K-JPG.tres"
+},
+"aCG_Metal061B_1K_JPG": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ambientcg/Extracted/DiamondPlate008C_1K-JPG.tres",
+"use_external/path": "res://ambientcg/Extracted/DiamondPlate008C_1K-JPG.tres"
+},
+"aCG_Wood081_1K_JPG": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ambientcg/Extracted/Wood026_1K-JPG.tres",
+"use_external/path": "res://ambientcg/Extracted/Wood026_1K-JPG.tres"
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

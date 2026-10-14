@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://n7mxaeqhve5t"]
+
+[ext_resource type="PackedScene" uid="uid://88ktds3goedp" path="res://assets/crowbar.glb" id="1_y5jjg"]
+[ext_resource type="Script" uid="uid://2ok5d8qhf6n3" path="res://scripts/Crowbar.gd" id="2_82u4h"]
+
+[node name="crowbar" unique_id=610517447 instance=ExtResource("1_y5jjg")]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0)
+script = ExtResource("2_82u4h")
+
+[node name="Plane" parent="." index="0" unique_id=1444250399]
+transform = Transform3D(-0.07455434, 0.22699955, -0.2276244, 0.14775279, -0.18332551, -0.23121609, -0.28550094, -0.15415242, -0.060218494, 0.029675612, 1.2915046, -0.6013842)

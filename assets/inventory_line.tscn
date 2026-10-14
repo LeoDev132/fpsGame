@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cipmvwca1sov8"]
+
+[ext_resource type="Script" uid="uid://gxjhupbi0q82" path="res://scripts/InventoryLine.gd" id="1_2c1cw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsk3o"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4arys"]
+bg_color = Color(0.0885599, 0.08855992, 0.08855986, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6iypd"]
+bg_color = Color(0.2159017, 0.21590173, 0.21590161, 1)
+
+[node name="Control" type="MenuButton" unique_id=2052022487]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsk3o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4arys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6iypd")
+flat = false
+script = ExtResource("1_2c1cw")

@@ -1,5 +1,5 @@
 extends MeshInstance3D
-
+#IDEA 
 #transforms 2D coordonates into a point in 3D space
 func _apply_noise(n: Noise4D, v: Vector2, vertical_scale: float, horizontal_scale: float):
 	return Vector3(v.x, n.get_noise_2d(v.x * horizontal_scale, v.y * horizontal_scale) * vertical_scale, v.y)

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cix3f164t1nry"]
+
+[ext_resource type="Script" uid="uid://dcj2057f2l3tp" path="res://scripts/test_zone.gd" id="1_b2y35"]
+
+[node name="Control" type="Node2D" unique_id=200936624]
+script = ExtResource("1_b2y35")
+
+[node name="val" type="HSlider" parent="." unique_id=1354242061]
+offset_right = 95.0
+offset_bottom = 16.0
+
+[node name="pre" type="HSlider" parent="." unique_id=1891623867]
+offset_left = -1.0
+offset_top = 36.0
+offset_right = 94.0
+offset_bottom = 52.0
+min_value = -3.0
+max_value = 3.0
+step = 0.1
+
+[node name="post" type="HSlider" parent="." unique_id=1393340498]
+offset_left = -1.0
+offset_top = 55.0
+offset_right = 94.0
+offset_bottom = 71.0
+min_value = -3.0
+max_value = 3.0
+step = 0.1
+
+[node name="Line2D" type="Line2D" parent="post" unique_id=1612164255]
+position = Vector2(95, 54)
+points = PackedVector2Array(0, 0, 0, 18.85, 0, 0, 27.965, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="." unique_id=1739071523]
+offset_left = 102.0
+offset_top = 4.0
+offset_right = 142.0
+offset_bottom = 27.0
+
+[node name="Label2" type="Label" parent="." unique_id=629294209]
+offset_left = 105.0
+offset_top = 47.0
+offset_right = 145.0
+offset_bottom = 70.0
+
+[node name="Label3" type="Label" parent="." unique_id=870359838]
+offset_left = 106.0
+offset_top = 79.0
+offset_right = 146.0
+offset_bottom = 102.0
+
+[connection signal="value_changed" from="val" to="." method="_on_val_value_changed"]
+[connection signal="value_changed" from="pre" to="." method="_on_pre_value_changed"]
+[connection signal="value_changed" from="post" to="." method="_on_post_value_changed"]

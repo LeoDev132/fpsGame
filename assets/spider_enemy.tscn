@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://4t6c3ui7scsy"]
+
+[ext_resource type="PackedScene" uid="uid://d1t7g5mjtif6x" path="res://assets/spider_enemy_base.tscn" id="1_g3mrn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ln6rh"]
+radius = 1.390939
+
+[node name="Node3D" type="RigidBody3D" unique_id=1150435543]
+
+[node name="spider_enemy" parent="." unique_id=287267723 instance=ExtResource("1_g3mrn")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1508429737]
+shape = SubResource("SphereShape3D_ln6rh")
